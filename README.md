@@ -1,3 +1,4 @@
+[技术方案可编辑版.pdf](https://github.com/xfysq1/machine-learning-algorithm-library/files/6392414/default.pdf)
 # machine-learning-algorithm-library
 项目主体方案如下：
 1、构建流程工业基于大数据的人工智能算法库
