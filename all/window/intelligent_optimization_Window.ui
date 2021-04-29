@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1432</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="2" column="0">
+     <widget class="QPushButton" name="button_GA">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>GA</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="button_PSO">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>PSO</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="4">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="page_GA">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QLabel" name="label_number_of_variables_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>目标维度</string>
+            </property>
+            <property name="text">
+             <string>控制变量个数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="number_of_variables_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_NIND_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>种群规模:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="NIND_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_MAXGEN_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>最大遗传代数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="MAXGEN_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_youhuajieguotu_GA">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>优化结果图</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QPushButton" name="xunlianmoxing_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对数据进行PCA建模</string>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="youhuajieguo_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取训练数据的PCA特征</string>
+            </property>
+            <property name="text">
+             <string>优化结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>保存特征数据</string>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_youhuajieguobiao_GA">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>优化结果表</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QGraphicsView" name="youhuajieguotu_GA"/>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_GA">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>遗传算法</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="1">
+         <widget class="QTableWidget" name="youhuajieguobiao_GA"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_lower_bounds_GA">
+            <property name="text">
+             <string>控制变量下界:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lower_bounds_GA"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_upper_bounds_GA">
+            <property name="text">
+             <string>控制变量上界:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="upper_bounds_GA"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_precision_GA">
+            <property name="text">
+             <string>精度:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="precision_GA">
+            <property name="text">
+             <string>1e-7</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_DE">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_youhuajieguotu_DE">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>优化结果图</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QGraphicsView" name="youhuajieguotu_DE"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_youhuajieguobiao_DE">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>优化结果表</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QTableWidget" name="youhuajieguobiao_DE"/>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="xunlianmoxing_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="youhuajieguo_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>优化结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_number_of_variables_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>控制变量个数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="number_of_variables_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_NIND_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>种群规模:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="NIND_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_MAXGEN_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>最大遗传代数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="MAXGEN_DE">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_DE">
+            <property name="text">
+             <string>差分进化算法</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_lower_bounds_DE">
+            <property name="text">
+             <string>控制变量下界:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lower_bounds_DE"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_upper_bounds_DE">
+            <property name="text">
+             <string>控制变量上界:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="upper_bounds_DE"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_PSO">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>6</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="6" column="0">
+         <widget class="QGraphicsView" name="youhuajieguotu_PSO"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_youhuajieguobiao_PSO">
+          <property name="text">
+           <string>优化结果表</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_youhuajieguotu_PSO">
+          <property name="text">
+           <string>优化结果图</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QPushButton" name="xunlianmoxing_PSO">
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="youhuajieguo_PSO">
+            <property name="text">
+             <string>优化结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_PSO">
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_PSO">
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_PSO">
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_PSO">
+            <property name="text">
+             <string>粒子群算法</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_number_of_variables_PSO">
+            <property name="text">
+             <string>控制变量个数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="number_of_variables_PSO">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_NIND_PSO">
+            <property name="text">
+             <string>种群规模:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="NIND_PSO">
+            <property name="text">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_MAXGEN_PSO">
+            <property name="text">
+             <string>最大遗传代数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="MAXGEN_PSO">
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QLabel" name="label_lower_bounds_PSO">
+            <property name="text">
+             <string>控制变量下界:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lower_bounds_PSO"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_upper_bounds_PSO">
+            <property name="text">
+             <string>控制变量上界:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="upper_bounds_PSO"/>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_inertia_PSO">
+            <property name="text">
+             <string>惯性系数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inertia_PSO">
+            <property name="text">
+             <string>0.8</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_personal_best_parameter_PSO">
+            <property name="text">
+             <string>个体最优系数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="personal_best_parameter_PSO">
+            <property name="text">
+             <string>0.5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_global_best_parameter_PSO">
+            <property name="text">
+             <string>全局最优系数:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="global_best_parameter_PSO">
+            <property name="text">
+             <string>0.5</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="1">
+         <widget class="QTableWidget" name="youhuajieguobiao_PSO"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_RIVI">
+       <layout class="QGridLayout" name="gridLayout_7"/>
+      </widget>
+      <widget class="QWidget" name="page_LASSO">
+       <layout class="QGridLayout" name="gridLayout_3"/>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="button_DE">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>DE</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1432</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_1">
+    <property name="title">
+     <string>数据</string>
+    </property>
+    <addaction name="definite_aim_func"/>
+   </widget>
+   <addaction name="menu_1"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="definite_aim_func">
+   <property name="text">
+    <string>定义目标函数</string>
+   </property>
+  </action>
+  <action name="load_test">
+   <property name="text">
+    <string>Testing data</string>
+   </property>
+  </action>
+  <action name="testdata">
+   <property name="text">
+    <string>Test_DATA</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

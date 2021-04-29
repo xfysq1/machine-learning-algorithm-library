@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1297</width>
+    <height>836</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="3" column="5">
+     <widget class="QPushButton" name="button_nbc">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>NBC</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_ceshishuju">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>测试数据</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="button_ann">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ANN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" colspan="3">
+     <widget class="QTableWidget" name="testWidget"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_xunlianshuju">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>训练数据</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="button_dt">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>DT</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="button_rf">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>RF</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="button_svm">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>SVM</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="3">
+     <widget class="QTableWidget" name="trainWidget"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="button_lda">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>LDA</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="6">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_LDA">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_solver_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>solver</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_solver_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>svd</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>lsqr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>eigen</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1">
+         <widget class="QTableWidget" name="lda_fenleijieguo"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_report_lda">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>LDA分类报告</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_fenleijieguo_lda">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>LDA分类结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="xunlian_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshijieguo_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_lda">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <widget class="QTextBrowser" name="lda_clfReport"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_SVM">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_c_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>惩罚参数C</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="c_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1.0</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_kernel_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>kernel</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_kernel_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>rbf</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>linear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>poly</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>sigmoid</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="balanced_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>balanced</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_decision_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>分类策略</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_decision_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>ovr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ovo</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1">
+         <widget class="QTableWidget" name="svm_fenleijieguo"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_report_svm">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>SVM分类报告</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="xunlian_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshijieguo_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_svm">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_fenleijieguo_svm">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>SVM分类结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QTextBrowser" name="svm_clfReport"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_DT">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QCheckBox" name="checkBox_maxdep_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>深度</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="maxdep_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_minspl_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>min_samples_split</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="minspl_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_minlea_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>min_samples_leaf</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="minlea_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_balanced_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>balanced</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QPushButton" name="xunlian_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshijieguo_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_dt">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_report_dt">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>DT分类报告</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_fenleijieguo_dt">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>DT分类结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="dt_fenleijieguo"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextBrowser" name="dt_clfReport"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_RF">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_numtree_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>子树数量</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="numtree_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_numfea_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>自定义特征数量</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="numfea_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_weight_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>类权重</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_weight_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>balanced</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>balanced_subsample</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QPushButton" name="xunlian_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshijieguo_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_rf">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_report_rf">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>RF分类报告</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_fenleijieguo_rf">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>RF分类结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="rf_fenleijieguo"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextBrowser" name="rf_clfReport"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_ANN">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_hidden_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>隐层大小</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="hidden_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>100</string>
+            </property>
+            <property name="placeholderText">
+             <string>请用逗号或分号进行分隔</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_active_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>激活函数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_active_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>relu</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>identity</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>logistic</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>tanh</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_solver_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>solver</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_solver_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>adam</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>lbfgs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>sgd</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_alpha_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>L2惩罚参数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="alpha_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.0001</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入非负数</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QPushButton" name="xunlian_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshijieguo_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_ann">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_fenleijieguo_ann">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>ANN分类结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="ann_fenleijieguo"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextBrowser" name="ann_clfReport"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_report_ann">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>ANN分类报告</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_NBC">
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_report_nbc">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>NBC分类报告</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="nbc_fenleijieguo"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextBrowser" name="nbc_clfReport"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_fenleijieguo_nbc">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>NBC分类结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_type_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>朴素贝叶斯类型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_type_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>GaussianNB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MultinomialNB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ComplementNB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>BernoulliNB</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_alpha_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>平滑参数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="alpha_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1.0</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入非负数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_binarize_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>二值化阈值</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="binarize_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.0</string>
+            </property>
+            <property name="placeholderText">
+             <string>请输入样本特征二值化的阈值</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QPushButton" name="xunlian_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshijieguo_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试结果</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_nbc">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1297</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>数据</string>
+    </property>
+    <addaction name="traindata"/>
+    <addaction name="testdata"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="traindata">
+   <property name="text">
+    <string>Train_DATA</string>
+   </property>
+  </action>
+  <action name="testdata">
+   <property name="text">
+    <string>Test_DATA</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

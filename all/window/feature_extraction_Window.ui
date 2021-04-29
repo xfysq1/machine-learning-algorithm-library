@@ -1,0 +1,2262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1264</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="3" column="0">
+     <widget class="QPushButton" name="button_pca">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>PCA</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_xunlianshuju">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string> 训练数据</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="button_ae">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>AE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="7">
+     <widget class="QPushButton" name="button_lae">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>labelAE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="4">
+     <widget class="QTableWidget" name="trainWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>230</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="button_kpca">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>KPCA</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="button_kpls">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>KPLS</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="button_pls">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>PLS</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QPushButton" name="button_sae">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>sparseAE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="6">
+     <widget class="QPushButton" name="button_dae">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>denoiseAE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4" colspan="4">
+     <widget class="QTableWidget" name="testWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>230</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QLabel" name="label_ceshishuju">
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>测试数据</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="8">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_PCA">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QLabel" name="label_n_components_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>目标维度</string>
+            </property>
+            <property name="text">
+             <string>n_components</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="n_components_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对原始数据进行预处理</string>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QPushButton" name="xunlian_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对数据进行PCA建模</string>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取训练数据的PCA特征</string>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取测试数据的PCA特征</string>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshujv_pca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>保存特征数据</string>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhenggongxiantu_pca">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>PCA特征贡献图</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshujv_pca">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="pca_features"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGraphicsView" name="pca_gongxiantu"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_PLS">
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_n_components_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>目标维度</string>
+            </property>
+            <property name="text">
+             <string>n_components</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="n_components_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_biaoqianlieshu_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>标签数量</string>
+            </property>
+            <property name="text">
+             <string>标签列数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="biaoqianlieshu_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对原始数据进行预处理</string>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QPushButton" name="xunlian_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对数据进行PLS建模</string>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取训练数据的PLS特征</string>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取测试数据的PLS特征</string>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshujv_pls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>保存特征数据</string>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="tezhenggongxiantu_pls">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>PLS特征贡献图</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="tezhengshujv_pls">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="pls_features"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGraphicsView" name="pls_gongxiantu"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_KPCA">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>6</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhenggonxiantu_kpca">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>KPCA特征贡献图</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="kpca_features">
+          <property name="cursor" stdset="0">
+           <cursorShape>SizeVerCursor</cursorShape>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_n_components_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>目标维度</string>
+            </property>
+            <property name="text">
+             <string>n_components</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="n_components_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_kernel_function_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>映射核函数</string>
+            </property>
+            <property name="text">
+             <string>kernel_function</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="kernel_function_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>linear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>poly</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rbf</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>sigmoid</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cosine</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_nkernel_components_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>映射后的数据维度</string>
+            </property>
+            <property name="text">
+             <string>nkernel_components</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="nkernel_components_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_kpca">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对原始数据进行预处理</string>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QPushButton" name="xunlian_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对数据进行KPCA建模</string>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取训练数据的KPCA特征</string>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取测试数据的KPCA特征</string>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshujv_kpca">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>保存特征数据</string>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshujv_kpca">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGraphicsView" name="kpca_gongxiantu"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_KPLS">
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QLabel" name="label_n_components_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>目标维度</string>
+            </property>
+            <property name="text">
+             <string>n_components</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="n_components_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_biaoqianlieshu_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>标签数量</string>
+            </property>
+            <property name="text">
+             <string>标签列数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="biaoqianlieshu_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_kernel_function_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>映射核函数</string>
+            </property>
+            <property name="text">
+             <string>kernel_function</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="kernel_function_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <item>
+             <property name="text">
+              <string>linear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>poly</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rbf</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>sigmoid</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cosine</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_nkernel_components_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>映射后的数据维度</string>
+            </property>
+            <property name="text">
+             <string>nkernel_components</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="nkernel_components_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string>请输入正整数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Pre_Processing_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对原始数据进行预处理</string>
+            </property>
+            <property name="text">
+             <string>Pre-Processing</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshujv_pls">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhenggonxiantu_kpls">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>KPLS特征贡献图</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QPushButton" name="xunlian_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>对数据进行KPLS建模</string>
+            </property>
+            <property name="text">
+             <string>训练模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取训练数据的KPLS特征</string>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxing_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxing_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>提取测试数据的KPLS特征</string>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshujv_kpls">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>保存特征数据</string>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="kpls_features">
+          <property name="cursor" stdset="0">
+           <cursorShape>SizeVerCursor</cursorShape>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGraphicsView" name="kpls_gongxiantu"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_AE">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_yincengjiegou_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>隐层结构：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="structure_ae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>[30, 20, 30]</string>
+            </property>
+            <property name="placeholderText">
+             <string>[30, 20, 30]</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_epoch_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Epoch：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="epoch_ae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+            <property name="placeholderText">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_batchsize_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Batch_size：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="batchsize_ae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>50</string>
+            </property>
+            <property name="placeholderText">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="earlystop_ae">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> EarlyStopping</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="chushihua_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>初始化模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxin_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunlian_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>重新训练</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxin_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_ae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_xunlianwucha_ae_">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>AE 训练误差</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshuju_ae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QWidget" name="history_ae" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="AE_features"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_SAE">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_yincengjiegou_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>隐层结构：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="structure_sae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>[30, 40, 30]</string>
+            </property>
+            <property name="placeholderText">
+             <string>[30, 20, 30]</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_epoch_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Epoch：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="epoch_sae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+            <property name="placeholderText">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_batchsize_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Batch_size：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="batchsize_sae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>50</string>
+            </property>
+            <property name="placeholderText">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="earlystop_sae">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> EarlyStopping</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="chushihua_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>初始化模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxin_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunlian_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>重新训练</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxin_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_sae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_xunlianwucha_sae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>sparseAE 训练误差</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshuju_sae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QWidget" name="history_sae" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="SAE_features"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_DAE">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_yincengjiegou_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>隐层结构：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="structure_dae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>[30, 40, 30]</string>
+            </property>
+            <property name="placeholderText">
+             <string>[30, 20, 30]</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_epoch_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Epoch：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="epoch_dae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+            <property name="placeholderText">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_batchsize_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Batch_size：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="batchsize_dae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>50</string>
+            </property>
+            <property name="placeholderText">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_corrupt_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Corrupt rate：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="corrupt_dae">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.5</string>
+            </property>
+            <property name="placeholderText">
+             <string>50</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="earlystop_dae">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> EarlyStopping</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="chushihua_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>初始化模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxin_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunlian_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>重新训练</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxin_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_dae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_xunlianwucha_dae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>denoiseAE 训练误差</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshuju_dae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QWidget" name="history_dae" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableWidget" name="DAE_features"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_LAE">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_yincengjiegou_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>隐层结构：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="structure_lae">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>[30, 40, 30]</string>
+          </property>
+          <property name="placeholderText">
+           <string>[30, 20, 30]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_epoch_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Epoch：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="epoch_lae">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>1000</string>
+          </property>
+          <property name="placeholderText">
+           <string>1000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_batchsize_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Batch_size：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLineEdit" name="batchsize_lae">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>50</string>
+          </property>
+          <property name="placeholderText">
+           <string>50</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLabel" name="label_zuoyong_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>作用：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QComboBox" name="zuoyong_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <item>
+           <property name="text">
+            <string>分类</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>回归</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="8">
+         <widget class="QLabel" name="label_biaoqianlieshu_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>标签列数：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="9">
+         <widget class="QLineEdit" name="biaoqianlieshu_lae">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="placeholderText">
+           <string>50</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="10">
+         <widget class="QRadioButton" name="earlystop_lae">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string> EarlyStopping</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="11">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QPushButton" name="chushihua_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>初始化模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="daorumoxin_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>导入模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunlian_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>重新训练</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="xunliantezheng_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>训练特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunmoxin_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存模型</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ceshitezheng_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>测试特征</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="baocunshuju_lae">
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1" colspan="3" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_xunlianwucha_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>labelAE 训练误差</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="8" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label_tezhengshuju_lae">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>特征数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="5">
+         <widget class="QWidget" name="history_lae" native="true"/>
+        </item>
+        <item row="3" column="5" colspan="6">
+         <widget class="QTableWidget" name="LAE_features"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1264</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_1">
+    <property name="title">
+     <string>数据</string>
+    </property>
+    <addaction name="traindata"/>
+    <addaction name="testdata"/>
+   </widget>
+   <addaction name="menu_1"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="traindata">
+   <property name="text">
+    <string>Train_DATA</string>
+   </property>
+  </action>
+  <action name="load_test">
+   <property name="text">
+    <string>Testing data</string>
+   </property>
+  </action>
+  <action name="testdata">
+   <property name="text">
+    <string>Test_DATA</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
